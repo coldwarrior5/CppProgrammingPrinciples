@@ -90,6 +90,8 @@ void fourth_task()
 			cout << "Repeated word: " << current << '\n';
 		previous = current;
 	}
+	// we can terminate this while loop by pressing CTRL + Z plus Enter in Windows
+	// or by pressing CTRL + D in UNIX, that represents EOF signal which will stop cin
 }
 
 void fifth_task()
