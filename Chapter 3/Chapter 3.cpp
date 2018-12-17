@@ -1,11 +1,14 @@
-// Chapter 3.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include "pch.h"
-#include <iostream>
+#include<string>
+#include<iostream>
+using namespace std;
 
-int Main()
+int main()
 {
-	STRING s = "Goodbye, cruel world! ";
-	cOut << S << '\n';
+	char c = 'x';
+	int i1 = c;
+	int i2 = 'x';
+	char c2 = i1;
+	cout << c << ' ' << i1 << ' ' << c2 << '\n';
+	system("pause");
 }
