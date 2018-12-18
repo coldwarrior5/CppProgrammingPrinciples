@@ -19,8 +19,10 @@ void exercise_3();
 void exercise_4();
 void exercise_5();
 void exercise_6();
+void exercise_7();
+void exercise_8();
+void exercise_9();
 
-/*
 int main()
 {
 	int selector = 1;
@@ -51,15 +53,15 @@ int main()
 	system("pause");
 	return 0;
 }
-*/
 
+/*
 int main()
 {
-	exercise_6();
+	exercise_9();
 	system("pause");
 	return 0;
 }
-
+*/
 void first_task()
 {
 	cout << "Please enter your first name and age\n";
@@ -298,6 +300,128 @@ void exercise_6()
 void exercise_7()
 {
 	string string_representation;
+	int digit = 0;
 	cout << "Enter spelled-out number: ";
 	cin >> string_representation;
+	if (string_representation == "zero")
+		digit = 0;
+	else if (string_representation == "one")
+		digit = 1;
+	else if (string_representation == "two")
+		digit = 2;
+	else if (string_representation == "three")
+		digit = 3;
+	else if (string_representation == "four")
+		digit = 4;
+	else if (string_representation == "five")
+		digit = 5;
+	else if (string_representation == "six")
+		digit = 6;
+	else if (string_representation == "seven")
+		digit = 7;
+	else if (string_representation == "eight")
+		digit = 8;
+	else if (string_representation == "nine")
+		digit = 9;
+	else
+	{
+		cout << "Not a digit";
+		return;
+	}
+	cout << "The digit representing written form is: " << digit;
+}
+
+void exercise_8()
+{
+	string operation = "+";
+	double first_operand = 0;
+	double second_operand = 0;
+	double result = 0;
+	cout << "Enter operation and two operand separated by comma, e.g. + 5 8: ";
+	cin >> operation >> first_operand >> second_operand;
+	if (operation == "plus" || operation == "+")
+		result = first_operand + second_operand;
+	else if (operation == "minus" || operation == "-")
+		result = first_operand - second_operand;
+	else if (operation == "mul" || operation == "*")
+		result = first_operand * second_operand;
+	else if (operation == "div" || operation == "/")
+		result = first_operand / second_operand;
+	else
+	{
+		cout << "Not a known operand";
+		return;
+	}
+	cout << "The result is: " << result << "\n";
+}
+
+void exercise_9()
+{
+	int coins[]{ 0, 0, 0, 0, 0, 0 };
+	int multiplier[]{ 1, 5, 10, 25, 50, 100 };
+	double result = 0;
+	cout << "How many pennies do you have? ";
+	cin >> coins[0];
+	cout << "How many nickels do you have? ";
+	cin >> coins[1];
+	cout << "How many dimes do you have? ";
+	cin >> coins[2];
+	cout << "How many quarters do you have? ";
+	cin >> coins[3];
+	cout << "How many half dollars do you have? ";
+	cin >> coins[4];
+	cout << "How many dollars do you have? ";
+	cin >> coins[5];
+
+	for(int i = 0; i < 6; i++)
+	{
+		cout << "You have " << coins[i];
+		string coin = "dollar";
+
+		switch (i)
+		{
+			case 0:
+				if (coins[i] == 1)
+					coin = "penny";
+				else
+					coin = "pennies";
+				break;
+			case 1:
+				if (coins[i] == 1)
+					coin = "nickel";
+				else
+					coin = "nickels";
+				break;
+			case 2:
+				if (coins[i] == 1)
+					coin = "dime";
+				else
+					coin = "dimes";
+				break;
+			case 3:
+				if (coins[i] == 1)
+					coin = "quarter";
+				else
+					coin = "quarters";
+				break;
+			case 4:
+				if (coins[i] == 1)
+					coin = "half dollar";
+				else
+					coin = "half dollars";
+				break;
+			case 5:
+				if (coins[i] == 1)
+					coin = "dollar";
+				else
+					coin = "dollars";
+				break;
+		default:
+			return;
+		}
+		cout << " " << coin << ".\n";
+		result += coins[i] * multiplier[i];
+	}
+	
+	cout << "The value of all of your coins is: " << result << " cents \n";
 }
