@@ -1,4 +1,3 @@
-#pragma once
 /*
    std_lib_facilities.h
 */

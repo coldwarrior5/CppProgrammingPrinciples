@@ -150,7 +150,7 @@ void safe_conversion()
 	int i1 = c;
 	int i2 = 'x';
 	char c2 = i1;
-	cout << c << ' ' << i1 << ' ' << c2 << '\n';
+	cout << c << ' ' << i1 << ' ' << c2 << i2 << '\n';
 }
 
 void drill()
@@ -159,7 +159,7 @@ void drill()
 	string friend_name;
 	char friend_sex = 0;
 	int age = 0;
-	
+
 	cout << "Enter the name of the person you want to write to:\n";
 	cin >> first_name;
 
@@ -179,9 +179,9 @@ void drill()
 	cout << "\nDear " << first_name << ",\n\n";
 	cout << "\thow are you doing lately? I am very happy in this new situation. This has been an amazing experience and I am so glad I have decided to go.\n";
 	cout << "Have you seen " << friend_name << " lately? ";
-	if(friend_sex == 'm')
+	if (friend_sex == 'm')
 		cout << "If you see " << friend_name << " please ask him to call me.\n";
-	else if(friend_sex == 'f')
+	else if (friend_sex == 'f')
 		cout << "If you see " << friend_name << " please ask her to call me.\n";
 	cout << "I hear you just had a birthday and you are " << age << " years old.\n";
 	if (age < 12)
@@ -205,7 +205,7 @@ void exercise_1()
 
 void exercise_2()
 {
-	int val1{0}, val2{0};
+	int val1{ 0 }, val2{ 0 };
 	cout << "Enter two integer values: ";
 	cin >> val1 >> val2;
 	if (val1 < val2)
@@ -233,7 +233,7 @@ void exercise_3()
 
 void exercise_4()
 {
-	int val1{ 0 }, val2{ 0 }, val3{0};
+	int val1{ 0 }, val2{ 0 }, val3{ 0 };
 	cout << "Enter three integer values: ";
 	cin >> val1 >> val2 >> val3;
 	if (val1 > val2)
@@ -242,7 +242,7 @@ void exercise_4()
 		val2 = val1;
 		val1 = temp;
 	}
-	if(val2 > val3)
+	if (val2 > val3)
 	{
 		int temp = val3;
 		val3 = val2;
@@ -254,7 +254,7 @@ void exercise_4()
 		val2 = val1;
 		val1 = temp;
 	}
-	
+
 	cout << "Sorted from smallest to biggest: " << val1 << ", " << val2 << ", " << val3 << "\n";
 }
 
@@ -300,7 +300,7 @@ void exercise_6()
 void exercise_7()
 {
 	string string_representation;
-	int digit = 0;
+	int digit;
 	cout << "Enter spelled-out number: ";
 	cin >> string_representation;
 	if (string_representation == "zero")
@@ -336,7 +336,7 @@ void exercise_8()
 	string operation = "+";
 	double first_operand = 0;
 	double second_operand = 0;
-	double result = 0;
+	double result;
 	cout << "Enter operation and two operand separated by comma, e.g. + 5 8: ";
 	cin >> operation >> first_operand >> second_operand;
 	if (operation == "plus" || operation == "+")
@@ -373,55 +373,55 @@ void exercise_9()
 	cout << "How many dollars do you have? ";
 	cin >> coins[5];
 
-	for(int i = 0; i < 6; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		cout << "You have " << coins[i];
 		string coin = "dollar";
 
 		switch (i)
 		{
-			case 0:
-				if (coins[i] == 1)
-					coin = "penny";
-				else
-					coin = "pennies";
-				break;
-			case 1:
-				if (coins[i] == 1)
-					coin = "nickel";
-				else
-					coin = "nickels";
-				break;
-			case 2:
-				if (coins[i] == 1)
-					coin = "dime";
-				else
-					coin = "dimes";
-				break;
-			case 3:
-				if (coins[i] == 1)
-					coin = "quarter";
-				else
-					coin = "quarters";
-				break;
-			case 4:
-				if (coins[i] == 1)
-					coin = "half dollar";
-				else
-					coin = "half dollars";
-				break;
-			case 5:
-				if (coins[i] == 1)
-					coin = "dollar";
-				else
-					coin = "dollars";
-				break;
+		case 0:
+			if (coins[i] == 1)
+				coin = "penny";
+			else
+				coin = "pennies";
+			break;
+		case 1:
+			if (coins[i] == 1)
+				coin = "nickel";
+			else
+				coin = "nickels";
+			break;
+		case 2:
+			if (coins[i] == 1)
+				coin = "dime";
+			else
+				coin = "dimes";
+			break;
+		case 3:
+			if (coins[i] == 1)
+				coin = "quarter";
+			else
+				coin = "quarters";
+			break;
+		case 4:
+			if (coins[i] == 1)
+				coin = "half dollar";
+			else
+				coin = "half dollars";
+			break;
+		case 5:
+			if (coins[i] == 1)
+				coin = "dollar";
+			else
+				coin = "dollars";
+			break;
 		default:
 			return;
 		}
 		cout << " " << coin << ".\n";
 		result += coins[i] * multiplier[i];
 	}
-	
+
 	cout << "The value of all of your coins is: " << result << " cents \n";
 }
