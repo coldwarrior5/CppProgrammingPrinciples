@@ -1,2 +1,2 @@
-# CppProgramingPrinciples
+# CppProgrammingPrinciples
 Book by Bjarne Stroustrup
